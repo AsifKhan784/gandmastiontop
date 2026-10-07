@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: shopi-api
+    runtime: python
+    plan: free
+    region: frankfurt
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn api.index:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PORT
+        value: 8081
+      - key: DEBUG
+        value: false
+      - key: DATA_DIR
+        value: /app/data
+      - key: PYTHON_VERSION
+        value: 3.11.8
+    healthCheckPath: /health
+    autoDeploy: true
