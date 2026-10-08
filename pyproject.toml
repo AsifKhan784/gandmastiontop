@@ -6,7 +6,8 @@ dependencies = [
     "fastapi",
     "uvicorn",
     "requests",
-    "beautifulsoup4"
+    "beautifulsoup4",
+    "pydantic-settings"
 ]
 
 [tool.vercel]
