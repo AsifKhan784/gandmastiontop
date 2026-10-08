@@ -1,0 +1,11 @@
+[project]
+name = "gandmastiontop"
+version = "1.0.0"
+requires-python = ">=3.9"
+dependencies = [
+    "fastapi",
+    "uvicorn"
+]
+
+[tool.vercel]
+entrypoint = "API.index:app"
